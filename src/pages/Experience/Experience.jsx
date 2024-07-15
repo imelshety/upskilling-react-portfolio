@@ -46,7 +46,7 @@ const Experience = () => {
                   item.color
                 } ${
                   index !== experiences.length - 1
-                    ? "after:absolute after:content-[''] after:w-1 after:h-[200px] after:bg-red-500 after:left-1/2 after:top-full after:-translate-x-1/2"
+                    ? "after:absolute after:content-[''] after:w-1 after:h-[600px] lg:after:h-[200px] after:bg-primaryWhithe-50 after:left-1/2 after:top-full after:-translate-x-1/2"
                     : ""
                 }`}
               >
