@@ -6,43 +6,37 @@ const Tab = () => {
       id: 1,
       title: "work1",
       srcImage: "/assets/work1.jpg",
-      color: "#2c98f0",
       desc: "description-work1",
     },
     {
       id: 2,
       title: "work2",
       srcImage: "/assets/work2.jpg",
-      color: "#ec5453",
-      percentage: 60,
+      desc: "description-work2",
     },
     {
       id: 3,
       title: "work3",
       srcImage: "/assets/work3.jpg",
-      color: "#f9bf3f",
-      percentage: 85,
+      desc: "description-work3",
     },
     {
       id: 4,
       title: "work4",
       srcImage: "/assets/work4.jpg",
-      color: "#a84cb8",
-      percentage: 90,
+      desc: "description-work4",
     },
     {
       id: 5,
       title: "work5",
       srcImage: "/assets/work5.jpg",
-      color: "#5cb85c",
-      percentage: 70,
+      desc: "description-work5",
     },
     {
       id: 6,
       title: "work6",
       srcImage: "/assets/work6.jpg",
-      color: "#337ab7",
-      percentage: 80,
+      desc: "description-work6",
     },
   ];
   const [showAll, setShowAll] = useState(false);
@@ -69,8 +63,11 @@ const Tab = () => {
                 className="relative bg-cover bg-center h-[20rem] rounded"
                 style={{ backgroundImage: `url(${card.srcImage})` }}
               >
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-[#337ab7] bg-opacity-75 rounded">
-                  <h4 className="text-white text-lg font-bold">{card.title}</h4>
+                <div className="absolute inset-0 flex flex-col ps-4 items-start justify-start opacity-0 hover:opacity-100 duration-300 bg-[#337ab7] bg-opacity-75 rounded">
+                  <h4 className="text-white text-lg font-bold underline ">
+                    {card.title}
+                  </h4>
+                  <p className="text-white">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -91,7 +88,7 @@ const Tab = () => {
         name="my_tabs_2"
         role="tab"
         className="tab"
-        aria-label="Tab 2"
+        aria-label="Software"
       />
       <div role="tabpanel" className="tab-content p-6">
         <div className="w-full h-full">
@@ -105,10 +102,11 @@ const Tab = () => {
                   className="relative bg-cover bg-center h-[20rem] rounded"
                   style={{ backgroundImage: `url(${card.srcImage})` }}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-[#337ab7] bg-opacity-75 rounded">
-                    <h4 className="text-white text-lg font-bold">
-                      {card.title}
-                    </h4>
+                  <div className="absolute inset-0 flex flex-col ps-4 items-start justify-start opacity-0 hover:opacity-100 duration-300 bg-[#337ab7] bg-opacity-75 rounded">
+                  <h4 className="text-white text-lg font-bold underline ">
+                    {card.title}
+                  </h4>
+                  <p className="text-white">{card.desc}</p>
                   </div>
                 </div>
               ))}
@@ -129,7 +127,7 @@ const Tab = () => {
         name="my_tabs_2"
         role="tab"
         className="tab"
-        aria-label="Tab 3"
+        aria-label="All"
       />
       <div role="tabpanel" className="tab-content p-6">
         <div className="w-full h-full">
@@ -140,8 +138,11 @@ const Tab = () => {
                 className="relative bg-cover bg-center h-[20rem] rounded"
                 style={{ backgroundImage: `url(${card.srcImage})` }}
               >
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-[#337ab7] bg-opacity-75 rounded">
-                  <h4 className="text-white text-lg font-bold">{card.title}</h4>
+                <div className="absolute inset-0 flex flex-col ps-4 items-start justify-start opacity-0 hover:opacity-100 duration-300 bg-[#337ab7] bg-opacity-75 rounded">
+                <h4 className="text-white text-lg font-bold underline ">
+                    {card.title}
+                  </h4>
+                  <p className="text-white">{card.desc}</p>
                 </div>
               </div>
             ))}
